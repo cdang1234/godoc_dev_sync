@@ -121,3 +121,17 @@ You can view the discussion of this issue on Github: https://github.com/golang/g
 ```
 godoc -url=/pkg/your_package > your_page.html
 ```
+
+### Articles Use for this Dev Sync
+https://blog.golang.org/godoc-documenting-go-code
+
+https://rakyll.org/style-packages/
+
+https://godoc.org/github.com/fluhus/godoc-tricks
+
+#### Supplement Article
+
+https://noti.st/kenigbolomeyastephen/gFreMs/continuous-documentation-the-best-time-is-now#sUftrMl
+
+The article above was given during a lightning talk at Gophercon 2019 and has a lot of helpful notes on how to improve documentation for your repository
+
