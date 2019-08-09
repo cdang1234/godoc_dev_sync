@@ -117,11 +117,6 @@ The rise of go modules will cause some of us to develope outside the GOPATH. Thi
 
 You can view the discussion of this issue on Github: https://github.com/golang/go/issues/26827
 
-## HTML Generation
-```
-godoc -url=/pkg/your_package > your_page.html
-```
-
 ### Articles Use for this Dev Sync
 https://blog.golang.org/godoc-documenting-go-code
 
