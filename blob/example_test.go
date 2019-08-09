@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/weconnect/playground/blob"
+	"github.com/cdang1234/playground/blob"
 )
 
 // This function is named Example(). godoc doesn't know what to associate it with
