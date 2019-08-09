@@ -29,6 +29,7 @@ You can embed blocks of code in your godoc with the addition of an extra indent 
 https://github.com/cdang1234/godoc_dev_sync/blob/master/blob/blob.go#L18
 
 ## Writing Examples
+You can insert examples into any files with the suffix ``_test.go`` within the same package as the code you would like to write examples for. I suggest writing a file called "example_test.go" whenever you want to write examples rather than appending examples to the package's testing suites.
 
 The naming convention to declare examples for the package, a function F, a type T and method M on type T are:
 
@@ -51,6 +52,7 @@ https://github.com/cdang1234/godoc_dev_sync/blob/master/blob/example_test.go
 
 Additional documentation examples:
 https://golang.org/pkg/testing/
+
 
 ## Bug Reporting
 Top-level comments that begin with the word "BUG(who)” are recognized as known bugs, and included in the "Bugs” section of the package documentation. 
