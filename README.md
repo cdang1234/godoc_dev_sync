@@ -16,10 +16,10 @@ Here is documentation on the different flags you can use for godoc: https://godo
 ## Documentation Formatting
 The convention is simple: to document a type, variable, constant, function, or even a package, write a regular comment directly preceding its declaration, with no intervening blank line. Godoc will then present that comment as text alongside the item it documents. For example, this is the documentation for the fmt package's Fprint function:
 
+```
 // Fprint formats using the default formats for its operands and writes to w.
 // Spaces are added between operands when neither is a string.
 // It returns the number of bytes written and any write error encountered.
-```
 func Fprint(w io.Writer, a ...interface{}) (n int, err error) {
 ```
 
@@ -42,6 +42,7 @@ Notice that documentation for a function will be grouped with its receiver.
 The Blob struct is defined in blob.go yet its function BlobType() is defined in random_file.go. If you run godoc on this repository you will find that BlobType()'s documentation is grouped with the Blob type's documentation.
 
 ## doc.go
+![doc.go example](https://images.app.goo.gl/9xLSMkqGZ8xniNRJ9)
 
 ## Titles for doc.go
 You can make titles in your godoc. A title is a line that is separated from its following line by an empty line, begins with a capital letter and doesn't end with punctuation.
