@@ -15,7 +15,9 @@ The convention is simple: to document a type, variable, constant, function, or e
 // Fprint formats using the default formats for its operands and writes to w.
 // Spaces are added between operands when neither is a string.
 // It returns the number of bytes written and any write error encountered.
+```
 func Fprint(w io.Writer, a ...interface{}) (n int, err error) {
+```
 
 ## Code Blocks Insertion
 
@@ -30,17 +32,22 @@ func Fprint(w io.Writer, a ...interface{}) (n int, err error) {
 ## Titles for doc.go
 You can make titles in your godoc. A title is a line that is separated from its following line by an empty line, begins with a capital letter and doesn't end with punctuation.
 For example, the code:
+```
 // Sentence 1
 //
 // Sentence 2
+```
 
 will yield:
 Sentence 1
 Sentence 2
+
 While this code:
+```
 // Sentence 1.
 //
 // Sentence 2.
+```
 
 will yield:
 Sentence 1.
@@ -49,11 +56,13 @@ Sentence 2.
 ## Paragraphs for doc.go
 To start a new paragraph, add an empty line in the comment between the 2 paragraphs.
 For example:
+```
 // Paragraph 1.
 // Still paragraph 1.
 //
 // Paragraph 2.
 // Still Paragraph 2.
+```
 
 will yield:
 Paragraph 1. Still paragraph 1.
@@ -63,4 +72,6 @@ Paragraph 2. Still Paragraph 2.
 ## Moving Outside of GOPATH
 
 ## HTML Generation
+```
 godoc -url=/pkg/your_package > your_page.html
+```
