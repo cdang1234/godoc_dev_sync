@@ -113,9 +113,11 @@ Paragraph 2. Still Paragraph 2.
 
 
 ## Moving Outside of GOPATH
-The rise of go modules will cause some of us to develope outside the GOPATH. This is an issue as godoc only shows documentation inside the GOPATH. This an ongoing issue that I will continue to look into.
+The rise of go modules will cause some of us to develope outside the GOPATH. This is an issue as godoc only shows documentation inside the GOPATH.
 
-You can view the discussion of this issue on Github: https://github.com/golang/go/issues/26827
+You can view the discussion of this ongoing issue on Github: https://github.com/golang/go/issues/26827
+
+Some workarounds include writing a script to copy your project onto the GOPATH or copying your project into a the GOPATH of a Docker container and running godoc from inside the container.
 
 ### Articles Use for this Dev Sync
 https://blog.golang.org/godoc-documenting-go-code
