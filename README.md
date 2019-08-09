@@ -1,6 +1,6 @@
 # godoc_dev_sync
 
-This README covers practices to maximize the usage of the godoc tool. 
+This README covers practices to maximize the usage of the godoc tool. Download this repository and run ``godoc`` to view the examples.
 
 ## Godoc
 It’s a tool to view your package’s documentation 
