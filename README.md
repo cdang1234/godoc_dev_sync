@@ -13,6 +13,10 @@ By default it runs on http://localhost:6060
 
 Here is documentation on the different flags you can use for godoc: https://godoc.org/golang.org/x/tools/cmd/godoc 
 
+Godoc compiles your code as it builds the HTML. If your code godoc's web server will still work but it doesn't render the HTML for the package whose code is failing to compile.
+
+Here is documentation on the different flags you can use for godoc: https://godoc.org/golang.org/x/tools/cmd/godoc
+
 ## Documentation Formatting
 The convention is simple: to document a type, variable, constant, function, or even a package, write a regular comment directly preceding its declaration, with no intervening blank line. Godoc will then present that comment as text alongside the item it documents. For example, this is the documentation for the fmt package's Fprint function:
 
@@ -75,6 +79,8 @@ When writing package comments of any size, keep in mind that their first sentenc
 https://github.com/cdang1234/godoc_dev_sync/blob/master/doc.go#L2
 
 doc.go's are defined per package which means you can have multiple doc.go files in your project.
+
+You can insert code into your doc.go file as well. Simply indent the text you would like to display as code.
 
 ## Titles for doc.go
 You can make titles in your godoc. A title is a line that is separated from its following line by an empty line, begins with a capital letter and doesn't end with punctuation.
