@@ -1,3 +1,8 @@
+/* BUG(r): Top-level comments that begin with the word "BUG(who)” are recognized as known bugs,
+and included in the "Bugs” section of the package documentation. The "who” part should be
+the user name of someone who could provide more information.
+*/
+
 package blob
 
 import (
