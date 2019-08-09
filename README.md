@@ -33,7 +33,7 @@ You can embed blocks of code in your godoc with the addition of an extra indent 
 https://github.com/cdang1234/godoc_dev_sync/blob/master/blob/blob.go#L18
 
 ## Writing Examples
-You can insert examples into any files with the suffix ``_test.go`` within the same package as the code you would like to write examples for. I suggest writing a file called "example_test.go" whenever you want to write examples rather than appending examples to the package's testing suites.
+You can insert examples by creating a file with the suffix ``_test.go`` within the same package as the code you would like to write examples for. I suggest writing a file called "example_test.go" whenever you want to write examples rather than appending examples to the package's testing suites.
 
 The naming convention to declare examples for the package, a function F, a type T and method M on type T are:
 
@@ -51,10 +51,24 @@ func ExampleF_suffix() { ... }
 func ExampleT_suffix() { ... }
 ```
 
-Examples within this repository:
+Please note that go's testing package also runs and verifies example code. This means if that the concluding line of your example has a line that begins with `` // Output: `` whatever is that defined by this output line will have its value compared with the standard output of the function. 
+
+Let's take an example from this repository
+
+```
+func ExampleBlob_LogBlob_b() {
+	b := &blob.Blob{Content: "b"}
+	b.LogBlob()
+	// Output: b
+}
+```
+
+The above code has a concluding line `` // Output: b`` which is interpreted by Go's testing package as asserting that the standard output of ExampleBlob_LogBlob_b() will be `b`. If this function doesn't write to standard out or writes the wrong value to standard out your tests will fail!
+
+More examples within this repository:
 https://github.com/cdang1234/godoc_dev_sync/blob/master/blob/example_test.go
 
-Additional documentation examples:
+Additional documentation on examples:
 https://golang.org/pkg/testing/
 
 
