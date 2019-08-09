@@ -70,6 +70,9 @@ Paragraph 2. Still Paragraph 2.
 
 
 ## Moving Outside of GOPATH
+Any Go packages installed inside $GOROOT/src/pkg and any GOPATH work spaces will already be accessible via godoc's command-line and HTTP interfaces. 
+
+You can specify additional paths for indexing via the -path flag or just by running "godoc ." in the directory you would like to document 
 
 ## HTML Generation
 ```
