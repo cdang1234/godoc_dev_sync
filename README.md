@@ -77,7 +77,9 @@ Let's say you want examples to show how you want your interfaces to behave. Sinc
 
 Once this is done you leverage pegomock to demontrate what the expected behavior is for types that implement the interface.
 
+https://github.com/cdang1234/godoc_dev_sync/blob/master/example_test.go#L20
 
+The caveat to this is that you must commit your generated mocks with your code or else your tests will fail in any unit testing steps of your CI jobs -- be wary of go clean-ing all of your mocks before pushing a commit.
 
 ## Bug Reporting
 Top-level comments that begin with the word "BUG(who)” are recognized as known bugs, and included in the "Bugs” section of the package documentation. 
