@@ -1,5 +1,7 @@
 # godoc_dev_sync
 
+This README covers practices to maximize the usage of the godoc tool. 
+
 ## Godoc
 It’s a tool to view your package’s documentation 
 
@@ -22,12 +24,22 @@ func Fprint(w io.Writer, a ...interface{}) (n int, err error) {
 ```
 
 ## Code Blocks Insertion
+You can embed blocks of code in your godoc with the addition of an extra indent to your comment's text:
+
+https://github.com/cdang1234/godoc_dev_sync/blob/master/blob/blob.go#L18
 
 ## Writing Examples
 
 ## Bug Reporting
+Top-level comments that begin with the word "BUG(who)” are recognized as known bugs, and included in the "Bugs” section of the package documentation. 
 
-## Godoc Parse
+Example: https://github.com/cdang1234/godoc_dev_sync/blob/master/blob/blob.go#L1
+
+## Documentation Binding
+
+Notice that documentation for a function will be grouped with its receiver. 
+
+The Blob struct is defined in blob.go yet its function BlobType() is defined in random_file.go. If you run godoc on this repository you will find that BlobType()'s documentation is grouped with the Blob type's documentation.
 
 ## doc.go
 
