@@ -30,6 +30,28 @@ https://github.com/cdang1234/godoc_dev_sync/blob/master/blob/blob.go#L18
 
 ## Writing Examples
 
+The naming convention to declare examples for the package, a function F, a type T and method M on type T are:
+
+```
+func Example() { ... }
+func ExampleF() { ... }
+func ExampleT() { ... }
+func ExampleT_M() { ... }
+```
+Multiple example functions for a package/type/function/method may be provided by appending a distinct suffix to the name. The suffix must start with a lower-case letter.
+
+```
+func Example_suffix() { ... }
+func ExampleF_suffix() { ... }
+func ExampleT_suffix() { ... }
+```
+
+Examples within this repository:
+https://github.com/cdang1234/godoc_dev_sync/blob/master/blob/example_test.go
+
+Additional documentation examples:
+https://golang.org/pkg/testing/
+
 ## Bug Reporting
 Top-level comments that begin with the word "BUG(who)” are recognized as known bugs, and included in the "Bugs” section of the package documentation. 
 
@@ -42,7 +64,13 @@ Notice that documentation for a function will be grouped with its receiver.
 The Blob struct is defined in blob.go yet its function BlobType() is defined in random_file.go. If you run godoc on this repository you will find that BlobType()'s documentation is grouped with the Blob type's documentation.
 
 ## doc.go
-![doc.go example](https://images.app.goo.gl/9xLSMkqGZ8xniNRJ9)
+
+If you want to add documentation to the package-level overview section then write a doc.go file. Here is an example of what the doc.go file generates for https://github.com/go-mgo/mgo:
+
+![doc.go example](https://golang-for-python-programmers.readthedocs.io/en/latest/_images/package.png)
+
+When writing package comments of any size, keep in mind that their first sentence will appear in godoc's package list:
+https://github.com/cdang1234/godoc_dev_sync/blob/master/doc.go#L2
 
 ## Titles for doc.go
 You can make titles in your godoc. A title is a line that is separated from its following line by an empty line, begins with a capital letter and doesn't end with punctuation.
