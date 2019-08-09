@@ -71,6 +71,13 @@ https://github.com/cdang1234/godoc_dev_sync/blob/master/blob/example_test.go
 Additional documentation on examples:
 https://golang.org/pkg/testing/
 
+## Writing Examples for Interfaces
+
+Let's say you want examples to show how you want your interfaces to behave. Since we can't instantiate interfaces we must instead generate mocks of the interfaces via pegomock. 
+
+Once this is done you leverage pegomock to demontrate what the expected behavior is for types that implement the interface.
+
+
 
 ## Bug Reporting
 Top-level comments that begin with the word "BUG(who)” are recognized as known bugs, and included in the "Bugs” section of the package documentation. 
