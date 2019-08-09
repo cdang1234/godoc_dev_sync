@@ -5,7 +5,9 @@ It’s a tool to view your package’s documentation
 
 “It is a great exercise to use godoc in the early phases of your package’s API design to see how your concepts will be rendered on doc. Sometimes, the visualization also has an impact on the design. Godoc is the way your users will consume a package, so it is ok to tweak things to make them more accessible. Run godoc -http=<hostport> to start a godoc server locally.” 
   
-By default it runs on port 6060.
+Any Go packages installed inside $GOROOT/src/pkg and any GOPATH work spaces will already be accessible via godoc's command-line and HTTP interfaces. 
+  
+By default it runs on http://localhost:6060
 
 Here is documentation on the different flags you can use for godoc: https://godoc.org/golang.org/x/tools/cmd/godoc 
 
@@ -70,9 +72,9 @@ Paragraph 2. Still Paragraph 2.
 
 
 ## Moving Outside of GOPATH
-Any Go packages installed inside $GOROOT/src/pkg and any GOPATH work spaces will already be accessible via godoc's command-line and HTTP interfaces. 
+The rise of go modules will cause some of us to develope outside the GOPATH. This is an issue as godoc only shows documentation inside the GOPATH. This an ongoing issue that I will continue to look into.
 
-You can specify additional paths for indexing via the -path flag or just by running "godoc ." in the directory you would like to document 
+You can view the discussion of this issue on Github: https://github.com/golang/go/issues/26827
 
 ## HTML Generation
 ```
