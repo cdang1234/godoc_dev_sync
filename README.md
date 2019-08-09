@@ -74,6 +74,8 @@ If you want to add documentation to the package-level overview section then writ
 When writing package comments of any size, keep in mind that their first sentence will appear in godoc's package list:
 https://github.com/cdang1234/godoc_dev_sync/blob/master/doc.go#L2
 
+doc.go's are defined per package which means you can have multiple doc.go files in your project.
+
 ## Titles for doc.go
 You can make titles in your godoc. A title is a line that is separated from its following line by an empty line, begins with a capital letter and doesn't end with punctuation.
 For example, the code:
